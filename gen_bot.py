@@ -1,8 +1,5 @@
 import pickle
 import numpy as np
-from sklearn.feature_extraction.text import CountVectorizer
-from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 # Neural Net Layers
 from tensorflow.keras.models import Sequential
@@ -76,7 +73,7 @@ def start(update, context):
 def help_str(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=help_text)
 
-updater = Updater(token='946871226:AAGYnGWwUwh_P1rc1WdCcpt5bFlyF0F9koQ', use_context=True)
+updater = Updater(token='Token', use_context=True)
 dp = updater.dispatcher
 start_handler = CommandHandler('start', start)
 help_handler = CommandHandler('help', help_str)
